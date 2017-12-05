@@ -1,0 +1,32 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true
+      }
+  },
+  /* Habilito o uso do "eslint-plugin-react" */
+  "plugins": [
+      "react"
+  ],
+  /* O ambiente define variaveis globais pre definidas */
+  "env": {
+      "browser": true,
+      "node": true
+  },
+  "rules": {
+      "semi": ["error", "never"], /* 0 - off | 1 - warn | 2 - error */
+      "linebreak-style": 0, /* Desabilitado a verificação de quebra de linha - Windows usa CRLF (\r\n) e unix usa LF (\n)*/
+      "indent": ["error", 2, { "SwitchCase": 1 }], /* Tamanho de 4 espaços pra indentação */
+      "react/jsx-uses-vars": 2,
+      "react/prefer-stateless-function": 0,
+      "react/jsx-filename-extension": 0,
+      "react/require-default-props": 0,
+      "import/no-extraneous-dependencies": 1,
+      "jsx-a11y/href-no-hash": "off",
+      "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+      "react/sort-comp": "off"
+  }
+}

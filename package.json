@@ -1,0 +1,41 @@
+{
+  "name": "prova-frontend",
+  "version": "1.0.0",
+  "description": "Desafio para vaga de front-end na Hi Platform",
+  "main": "index.js",
+  "repository": "https://github.com/Lucasdsk/prova-frontend.git",
+  "author": "Lucas Gomes <lucas.dsky@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "scripts": {
+    "start": "node server",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "eslint": "4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.4.0",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.2.1",
+    "react-hot-loader": "^3.1.3",
+    "regenerator-runtime": "^0.11.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.5"
+  }
+}
