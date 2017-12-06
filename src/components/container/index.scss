@@ -1,0 +1,32 @@
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+
+  &--fluid {
+    max-width: 100%;
+  }
+
+  &--primary {
+    border: 1px solid #dfe0e2;
+    background-color: #fff;
+  }
+
+  &--no-border-top {
+    border-top: none;
+  }
+
+  &--no-border-right {
+    border-right: none;
+  }
+
+  &--no-border-bottom {
+    border-bottom: none;
+  }
+
+  &--no-border-left {
+    border-left: none;
+  }
+
+}

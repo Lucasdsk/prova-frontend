@@ -1,0 +1,21 @@
+
+.user-description {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    margin-right: 10px;
+  }
+
+  &__name {
+    text-transform: uppercase;
+  }
+
+  &__options-wrapper {
+
+  }
+
+  &__options {
+
+  }
+}

@@ -1,0 +1,30 @@
+
+.header-actions {
+  &__icon {
+    font-size: 20px;
+    color: #97a3a6;
+
+    & + & {
+      margin-left: 1em;
+    }
+  }
+
+  .notifications-icon {
+    position: relative;
+
+    &__counter {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      right: -4px;
+      top: -4px;
+      line-height: 15px;
+      text-align: center;
+      font-size: 10px;
+      color: #fff;
+      border-radius: 50%;
+      background-color: #f00;
+    }
+  }
+
+}

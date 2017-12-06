@@ -2,6 +2,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
+const { join } = path
+
 module.exports = {
   entry: [
     'react-hot-loader/patch',
@@ -30,6 +32,25 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
+      {
+        test: /\.(s*)css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|txt)(\?.*)?$/,
+        use: {
+          loader: 'file-loader',
+          query: {
+            name: 'media/[name].[hash:8].[ext]',
+          },
+        },
+      },
     ],
+  },
+  resolve: {
+    alias: {
+      components: join(__dirname, 'src', 'components'),
+      images: join(__dirname, 'media'),
+    },
   },
 }

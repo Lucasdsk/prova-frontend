@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Pages from './pages'
+import './index.scss'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-  }
- 
-  teste = () => {
-    console.log('teste')
-  }
+import Container from './components/container'
 
-  render() {
-    return (
-      <div>App</div>
-    )
-  }
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route component={Pages} />
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
 export default App
