@@ -7,6 +7,7 @@ const Container = ({
   children,
   className,
   fluid,
+  noBorders,
   noBorderTop,
   noBorderRight,
   noBorderBottom,
@@ -18,6 +19,7 @@ const Container = ({
       className={cx('container', className, {
         'container--fluid': fluid,
         'container--primary': primary,
+        'container--no-borders': noBorders,
         'container--no-border-top': noBorderTop,
         'container--no-border-right': noBorderRight,
         'container--no-border-bottom': noBorderBottom,
@@ -40,6 +42,7 @@ Container.propTypes = {
   ]),
   className: PropTypes.string,
   fluid: PropTypes.bool,
+  noBorders: PropTypes.bool,
   noBorderTop: PropTypes.bool,
   noBorderRight: PropTypes.bool,
   noBorderBottom: PropTypes.bool,

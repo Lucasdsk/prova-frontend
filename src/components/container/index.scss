@@ -9,8 +9,12 @@
   }
 
   &--primary {
-    border: 1px solid #dfe0e2;
+    border: 1px solid #f2f2f2;
     background-color: #fff;
+  }
+
+  &--no-borders {
+    border: none;
   }
 
   &--no-border-top {

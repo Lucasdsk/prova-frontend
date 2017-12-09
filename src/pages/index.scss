@@ -7,11 +7,15 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    .user-description__name {
+      color: #ababab;
+    }
   }
 
   &__header-user-profile {
     .user-description__img {
-      max-width: 50px;
+      
     }
   }
 

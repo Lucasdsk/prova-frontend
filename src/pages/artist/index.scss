@@ -1,0 +1,23 @@
+
+.artist-page {
+  &__header {
+
+  }
+
+  &__info {
+    padding: 20px 0 35px;
+
+    .user-description__img {
+      margin-right: 15px;
+    }
+
+    .user-description__name {
+      font-size: 1.8em;
+      color: #2f3d4f;
+    }
+  }
+
+  &__container {
+    margin-top: 50px;
+  }
+}

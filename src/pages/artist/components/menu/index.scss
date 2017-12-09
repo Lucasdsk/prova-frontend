@@ -1,0 +1,21 @@
+
+.menu {
+  
+  &__item {
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #3d454f;
+    padding: 5px 15px 10px;
+    display: inline-block;
+
+    &--active,
+    &:hover {
+      box-shadow: inset 0 -5px #2dcb73;
+    }
+
+    & + & {
+      margin-left: 35px;
+    }
+  }
+}
