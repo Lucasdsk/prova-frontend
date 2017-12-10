@@ -6,6 +6,7 @@ const { join } = path
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://0.0.0.0:3000',
     'webpack/hot/only-dev-server',
@@ -52,6 +53,7 @@ module.exports = {
     alias: {
       components: join(__dirname, 'src', 'components'),
       images: join(__dirname, 'media'),
+      api: join(__dirname, 'src', 'API'),
     },
   },
 }

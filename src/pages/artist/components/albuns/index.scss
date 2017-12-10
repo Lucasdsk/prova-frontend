@@ -1,9 +1,9 @@
 
 .albuns-list {
-  padding: 20px 15px;
-
   &__album {
     display: flex;
+    padding: 20px 15px;
+    margin-top: 50px;
 
     &-image {
       flex-basis: 15%;
@@ -72,6 +72,12 @@
         }
       }
     }
+  }
+
+  &__no-data {
+    font-size: 1.2em;
+    padding: 15px 0;
+    color: #b9b9b9;
   }
 }
 

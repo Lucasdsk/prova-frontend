@@ -1,76 +1,72 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Container from 'components/container'
+import moment from 'moment'
 import './index.scss'
 
-const MusicList = ({ musics }) => {
-  return (
-    <div className="albuns-list__music-list">
-      {
+const MusicList = ({ musics }) => (
+  <div className="albuns-list__music-list">
+    {
+      musics.length ?
         musics.map((music, index) => (
           <div key={index} className="albuns-list__music-list__music">
-            <span className="music-name">{ music.name }</span>
-            <span className="music-duration">{ music.duration }</span>
+            <span className="music-name">{ music.trackName }</span>
+            <span className="music-duration">{ moment(music.trackTimeMillis).format('mm:ss') }</span>
           </div>
         ))
-      }
-    </div>
-  )
-}
+      : (
+        <div className="albuns-list__no-data">
+          No musics...
+        </div>
+      )
+    }
+  </div>
+)
 
 MusicList.propTypes = {
   musics: PropTypes.array.isRequired,
 }
 
-const AlbumTitle = ({ year, title }) => {
-  return (
-    <div className="albuns-list__title">
-      <span className="album-year">{year}</span>
-      <h2 className="album-name">{title}</h2>
-    </div>
-  )
-}
+const AlbumTitle = ({ year, title }) => (
+  <div className="albuns-list__title">
+    <span className="album-year">{year}</span>
+    <h2 className="album-name">{title}</h2>
+  </div>
+)
 
 AlbumTitle.propTypes = {
-  year: PropTypes.number.isRequired,
+  year: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }
 
-const MOCK_MUSIC_LIST = [
-  {
-    name: 'musica 1',
-    duration: '3:27'
-  },
-  {
-    name: 'musica 2',
-    duration: '3:28'
-  }
-]
-
-const Album = () => {
-  return (
-    <div className="albuns-list__album">
-      <div className="albuns-list__album-image">
-        <img src="http://is4.mzstatic.com/image/thumb/Music4/v4/69/48/2e/69482ef7-3554-174e-73da-3fab18d55889/source/100x100bb.jpg" alt="sia"/>
-      </div>
-      <div className="albuns-list__album-info">
-        <AlbumTitle year={2017} title="Everyday is a Christmas" />
-        <MusicList musics={MOCK_MUSIC_LIST} />
-      </div>
+const Album = ({ data }) => (
+  <Container className="albuns-list__album">
+    <div className="albuns-list__album-image">
+      <img src={data.artworkUrl100} alt={data.collectionName} />
     </div>
-  )
+    <div className="albuns-list__album-info">
+      <AlbumTitle year={moment(data.releaseDate).format('Y')} title={data.collectionName} />
+      <MusicList musics={data.songs} />
+    </div>
+  </Container>
+)
+
+Album.propTypes = {
+  data: PropTypes.object.isRequired,
 }
 
-const AlbunsList = () => {
-  return (
-    <Container className="albuns-list">
-      <Album />
-    </Container>
-  )
-}
+const AlbunsList = ({ data }) => (
+  <Container primary={false} className="albuns-list">
+    {
+      data.map((album) => (
+        <Album key={album.collectionId} data={album} />
+      ))
+    }
+  </Container>
+)
 
 AlbunsList.propTypes = {
-
+  data: PropTypes.array,
 }
 
 export default AlbunsList

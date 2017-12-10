@@ -13,23 +13,21 @@ const Container = ({
   noBorderBottom,
   noBorderLeft,
   primary,
-}) => {
-  return (
-    <div
-      className={cx('container', className, {
-        'container--fluid': fluid,
-        'container--primary': primary,
-        'container--no-borders': noBorders,
-        'container--no-border-top': noBorderTop,
-        'container--no-border-right': noBorderRight,
-        'container--no-border-bottom': noBorderBottom,
-        'container--no-border-left': noBorderLeft,
-      })}
-    >
-      {children}
-    </div>
-  )
-}
+}) => (
+  <div
+    className={cx('container', className, {
+      'container--fluid': fluid,
+      'container--primary': primary,
+      'container--no-borders': noBorders,
+      'container--no-border-top': noBorderTop,
+      'container--no-border-right': noBorderRight,
+      'container--no-border-bottom': noBorderBottom,
+      'container--no-border-left': noBorderLeft,
+    })}
+  >
+    {children}
+  </div>
+)
 
 Container.defaultProps = {
   primary: true,

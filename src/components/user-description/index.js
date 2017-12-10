@@ -37,7 +37,7 @@ class UserDescription extends PureComponent {
           className,
           {'user-description--click': showOptions}
         )}
-        onClick={showOptions && this.toggleShowOptions}
+        onClick={showOptions ? this.toggleShowOptions : undefined}
       >
         <div
           className="user-description__img"
