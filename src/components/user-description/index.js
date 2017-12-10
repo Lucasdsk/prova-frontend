@@ -49,7 +49,6 @@ class UserDescription extends PureComponent {
               <Icon
                 className="user-description__toggle-options"
                 name="angle-down"
-                
               />
               {
                 this.state.optionsVisible && (

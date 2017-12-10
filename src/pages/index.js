@@ -27,7 +27,7 @@ const Pages = ({ mobile }) => (
     primary={false}
   >
     <Container className="app-container__header" fluid noBorderTop >
-      <HeaderActions />
+      <HeaderActions notificationCount={2} />
       <UserDescription
         className="app-container__header-user-profile"
         image={ProfileImage}
@@ -39,7 +39,9 @@ const Pages = ({ mobile }) => (
     </Container>
     <Switch>
       <Route exact path="/" render={redirectToArtistPage} />
-      <Route path="/artist/:artistName" component={Artist} />
+      <Route path="/artist/:artistName" render={(props) => (
+        <Artist {...props} mobile={mobile} />
+      )} />
       <Route component={PageNotFound} />
     </Switch>
   </Container>

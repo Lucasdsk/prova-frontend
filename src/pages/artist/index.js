@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Route, Switch } from 'react-router-dom'
 import { getAlbuns, getSongs } from 'api'
 import UserDescription from 'components/user-description'
@@ -62,7 +63,8 @@ class Artist extends Component {
   render() {
     const {
       location: { pathname },
-      match: { url }
+      match: { url },
+      mobile,
     } = this.props
 
     return (
@@ -75,7 +77,7 @@ class Artist extends Component {
               imageWidth={100}
               image={SiaImage}
             />
-            <Menu path={pathname} options={MenuOptions(url)} />
+            <Menu path={pathname} options={MenuOptions(url)} mobile={mobile} />
           </Container>
         </Container>
   
@@ -92,6 +94,10 @@ class Artist extends Component {
       </Container>
     )
   }
+}
+
+Artist.propTypes = {
+  mobile: PropTypes.bool,
 }
 
 export default Artist

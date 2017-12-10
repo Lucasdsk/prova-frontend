@@ -5,11 +5,11 @@ import './index.scss'
 
 const HeaderActions = ({ notificationCount }) => (
   <div className="header-actions">
-    <Icon className="header-actions__icon" name="user" />
-    <Icon className="header-actions__icon" name="comment-o" />
+    <Icon className="header-actions__icon user" name="user" />
+    <Icon className="header-actions__icon comment" name="comment-o" />
     <span className="header-actions__icon notifications-icon">
       <Icon className="header-actions__icon" name="bell-o" />
-      <span className="notifications-icon__counter">2</span>
+      <span className="notifications-icon__counter">{notificationCount}</span>
     </span>
   </div>
 )

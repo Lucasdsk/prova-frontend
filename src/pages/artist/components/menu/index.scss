@@ -1,5 +1,48 @@
 
 .menu {
+
+  &--mobile {
+    max-width: 200px;
+
+    .menu {
+      &-mobile-container {
+        position: relative;
+    
+        &__selected-item {
+          cursor: pointer;
+        }
+
+        &__selected-item,
+        &__selected-item:hover {
+          box-shadow: inset 5px 0 #2dcb73;
+        }
+
+        &__toggle-options {
+          margin-left: 10px;
+        }
+    
+        &__options {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 100%;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 3px 3px 6px #e2e0e0;
+          background-color: #fff;
+    
+          .menu__item {
+            margin: 0;
+            padding-top: 10px;
+
+            &:hover {
+              box-shadow: inset 5px 0 #2dcb73;
+            }
+          }
+        }
+      }
+    }
+  }
   
   &__item {
     letter-spacing: 1px;

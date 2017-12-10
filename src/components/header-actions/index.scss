@@ -12,6 +12,7 @@
 
   .notifications-icon {
     position: relative;
+    margin-left: 1em;
 
     &__counter {
       position: absolute;
@@ -27,5 +28,15 @@
       background-color: #f00;
     }
   }
+}
 
+@media all and (max-width: 768px) {
+  .header-actions {
+    &__icon {
+      &.user,
+      &.comment {
+        display: none;
+      }
+    }
+  }
 }
