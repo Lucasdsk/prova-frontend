@@ -1,0 +1,92 @@
+
+.albuns-list {
+  padding: 20px 15px;
+
+  &__album {
+    display: flex;
+
+    &-image {
+      flex-basis: 15%;
+      text-align: center;
+      padding: 0 1em;
+
+      img {
+        max-width: 100px;
+      }
+    }
+
+    &-info {
+      flex-basis: 85%;
+      padding-left: 25px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 2px;
+        height: 80%;
+        background-color: #efefef;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+    box-shadow: 0 2px #efefef;
+
+    .album-year {
+      font-size: .8em;
+      color: #b9b9b9;
+    }
+
+    .album-name {
+      color: #498ee3;
+      font-size: 1.5em;
+    }
+  }
+
+  &__music-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+
+    &__music {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 0 2px #efefef;
+
+      .music {
+        &-name,
+        &-duration {
+          font-size: .9em;
+        }
+
+        &-name {
+          font-size: .95em;
+        }
+
+        &-duration {
+          color: #c5c6ca;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .albuns-list {
+    &__album {
+      flex-direction: column;
+
+      &-info {
+        padding-left: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

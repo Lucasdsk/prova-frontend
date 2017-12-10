@@ -3,10 +3,10 @@ import { Route } from 'react-router-dom'
 import UserDescription from 'components/user-description'
 import Container from 'components/container'
 import Menu from './components/menu'
+import Albuns from './components/albuns'
 import SiaImage from 'images/sia.jpg'
 import "./index.scss"
 
-const Albuns = () => <div>Albuns</div>
 const Artists = () => <div>Artists</div>
 const Playlists = () => <div>Playlists</div>
 
