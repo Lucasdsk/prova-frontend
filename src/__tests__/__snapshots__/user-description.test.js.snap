@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserDescription> Render UserDescription 1`] = `
+<div
+  className="user-description"
+>
+  <div
+    className="user-description__img"
+    style={
+      Object {
+        "backgroundImage": "url(test-file-stub)",
+        "height": 50,
+        "width": 50,
+      }
+    }
+  />
+  <span
+    className="user-description__name"
+  />
+</div>
+`;

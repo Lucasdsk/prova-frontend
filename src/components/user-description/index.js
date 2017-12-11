@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import Icon from 'react-fontawesome'
+import DefaultProfileImage from 'images/profile.jpg'
 import './index.scss'
 
 class UserDescription extends PureComponent {
@@ -76,6 +77,11 @@ class UserDescription extends PureComponent {
       </div>
     )
   }
+}
+
+UserDescription.defaultProps = {
+  imageWidth: 50,
+  image: DefaultProfileImage,
 }
 
 UserDescription.propTypes = {

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderActions /> Render HeaderActions 1`] = `
+<div
+  className="header-actions"
+>
+  <FontAwesome
+    className="header-actions__icon user"
+    name="user"
+  />
+  <FontAwesome
+    className="header-actions__icon comment"
+    name="comment-o"
+  />
+  <span
+    className="header-actions__icon notifications-icon"
+  >
+    <FontAwesome
+      className="header-actions__icon"
+      name="bell-o"
+    />
+    <span
+      className="notifications-icon__counter"
+    />
+  </span>
+</div>
+`;
